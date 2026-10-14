@@ -1,0 +1,199 @@
+/*************************************************************CHÚ THÍCH BỘ MÀU************************************************************/
+:root {
+    --white: #FFFFFF;
+    --main-background: #FFFFFF;
+    --month-nav: #101828;
+    --weekday: #5E718F;
+    --highlight-today: #00615E;
+    --highlight-picked-day: #00615E;
+    --day-in-month: #101828;
+    --day-not-in-month: #99A1AF;
+    --month-title: #101828;
+    --day-hover: rgba(0, 97, 94, 0.2);
+    --box-shadow: #B8DBDB;
+    --border: #E5E7EB;
+}
+/*
+    - main-background: màu nền chính của bảng lịch, là màu nền tổng quát;
+    - month-nav: màu nút prev/next (di chuyển giữa các tháng) trên lịch;
+    - weekday: màu của các thứ trong tuần;
+    - highlight-today: màu border và màu chữ của ngày hôm nay (today);
+    - highlight-picked-day: màu nền và màu chữ của ngày đã chọn trên input;
+    --- có thể tự custom cách hiển thị lại tại class .ui-state-highlight và .ui-state-active ---
+    - day-in-month: màu chữ của ngày trong tháng;
+    - day-not-in-month: màu chữ của ngày không phải thuộc tháng hiện tại;
+    - month-title: màu tiêu đề tháng của lịch;
+    - day-hover: màu nền của ngày được di chuột vào;
+    - box-shadow: màu box shadow của bảng lịch;
+*/
+#ui-datepicker-div {
+    background: var(--main-background);
+    border-radius: 8px;
+    /* -webkit-box-shadow: 0 0 4px 0.1rem var(--box-shadow);
+    -moz-box-shadow: 0 0 4px 0.1rem var(--box-shadow);
+    box-shadow: 0 0 4px 0.1rem var(--box-shadow); */
+    margin-top: 4px;
+    border: 1px solid var(--border);
+    z-index: 9999 !important;
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+    position: absolute;
+    font-size: 24px;
+    color: var(--month-nav) !important;
+    top: 0;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.ui-datepicker-prev {
+    left: 0;
+}
+
+.ui-datepicker-next {
+    right: 0;
+}
+
+.ui-datepicker-header {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 16px 24px;
+    position: relative;
+}
+
+.ui-datepicker-calendar {
+    text-align: center;
+    margin: 16px 24px;
+}
+
+    .ui-datepicker-calendar tr th, .ui-datepicker-calendar tr td {
+        padding-bottom: 4px;
+    }
+
+    .ui-datepicker-calendar a,
+    .ui-datepicker-calendar span {
+        text-decoration: none;
+        display: block;
+        margin: 0 auto;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        border-radius: 50%;
+        border: 1px solid transparent;
+        cursor: pointer;
+    }
+
+    .ui-datepicker-calendar thead tr th {
+        font-family: inherit;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        color: var(--weekday);
+    }
+
+    .ui-datepicker-calendar tbody tr td:hover a {
+        background-color: var(--day-hover);
+        border-radius: 50%;
+    }
+
+    .ui-datepicker-calendar .ui-state-highlight {
+        border-color: var(--highlight-today);
+        color: var(--highlight-today);
+    }
+
+    .ui-datepicker-calendar tbody tr td:hover a.ui-state-highlight {
+        border-color: var(--highlight-today);
+        color: var(--highlight-today);
+    }
+
+    .ui-datepicker-calendar tbody tr td a.ui-state-active {
+        border-color: var(--highlight-picked-day);
+        color: var(--white) !important;
+        background: var(--highlight-picked-day);
+    }
+
+    .ui-datepicker-calendar tbody tr td a {
+        font-family: inherit;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        color: var(--day-in-month);
+    }
+
+    .ui-datepicker-calendar tbody tr td.ui-datepicker-other-month a,
+    .ui-datepicker-calendar tbody tr td.ui-state-disabled,
+    .ui-datepicker-calendar tbody tr td.ui-datepicker-unselectable {
+        color: var(--day-not-in-month);
+        opacity: 0.5;
+    }
+
+.ui-datepicker-title {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    color: var(--month-title);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.ui-datepicker-title select {
+    border: none;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    color: var(--month-title);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.ui-icon, .ui-icon > i {
+    width: 24px;
+    height: 24px;
+    display: block;
+    font-size: 0;
+}
+
+.ui-datepicker-prev .ui-icon::before {
+    content: "" !important;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="mask0_813_5172" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24"><rect x="24" y="24" width="24" height="24" transform="rotate(-180 24 24)" fill="%23D9D9D9"/></mask><g mask="url(%23mask0_813_5172)"><path d="M11.0538 12.0001L15.1269 16.0732C15.2654 16.2117 15.3362 16.3857 15.3394 16.5953C15.3426 16.8049 15.2718 16.9822 15.1269 17.127C14.982 17.2719 14.8064 17.3444 14.6 17.3444C14.3936 17.3444 14.218 17.2719 14.0731 17.127L9.57889 12.6328C9.48529 12.5392 9.41926 12.4405 9.38081 12.3367C9.34235 12.2328 9.32311 12.1207 9.32311 12.0001C9.32311 11.8796 9.34235 11.7674 9.38081 11.6636C9.41926 11.5598 9.48529 11.461 9.57889 11.3675L14.0731 6.87324C14.2116 6.73477 14.3856 6.66394 14.5952 6.66074C14.8048 6.65752 14.982 6.72835 15.1269 6.87324C15.2718 7.0181 15.3442 7.19374 15.3442 7.40014C15.3442 7.60654 15.2718 7.78217 15.1269 7.92704L11.0538 12.0001Z" fill="%231C1B1F"/></g></svg>');
+}
+
+.ui-datepicker-next .ui-icon::before {
+    content: "" !important;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="mask0_813_5169" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24"><rect width="24" height="24" fill="%23D9D9D9"/></mask><g mask="url(%23mask0_813_5169)"><path d="M12.9462 11.9999L8.87309 7.92676C8.73462 7.78831 8.66379 7.61428 8.66059 7.40466C8.65737 7.19506 8.7282 7.01783 8.87309 6.87296C9.01795 6.72808 9.19359 6.65564 9.39999 6.65564C9.60639 6.65564 9.78202 6.72808 9.92689 6.87296L14.4211 11.3672C14.5147 11.4608 14.5807 11.5595 14.6192 11.6633C14.6577 11.7672 14.6769 11.8793 14.6769 11.9999C14.6769 12.1204 14.6577 12.2326 14.6192 12.3364C14.5807 12.4402 14.5147 12.539 14.4211 12.6325L9.92689 17.1268C9.78844 17.2652 9.6144 17.3361 9.40479 17.3393C9.19519 17.3425 9.01795 17.2716 8.87309 17.1268C8.7282 16.9819 8.65576 16.8063 8.65576 16.5999C8.65576 16.3935 8.7282 16.2178 8.87309 16.073L12.9462 11.9999Z" fill="%231C1B1F"/></g></svg>');
+}
+
+@media screen and (max-width: 1366px) {
+    .ui-datepicker-calendar tr th, .ui-datepicker-calendar tr td {
+        padding-bottom: 4px;
+    }
+
+    .ui-datepicker-title,
+    .ui-datepicker-calendar thead tr th,
+    .ui-datepicker-calendar tbody tr td a {
+        font-size: 14px;
+    }
+
+    .ui-datepicker-header {
+        margin: 12px 20px;
+    }
+
+    .ui-datepicker-calendar {
+        margin: 12px 20px;
+    }
+}

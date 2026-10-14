@@ -1,0 +1,133 @@
+/*************************************************************CHÚ THÍCH BỘ MÀU************************************************************/
+:root {
+    --white: #FFFFFF;
+    --main-background: #FFFFFF;
+    --month-nav: #53413D;
+    --weekday: #53413D;
+    --highlight-today: #654F3F;
+    --highlight-picked-day: #654F3F;
+    --day-in-month: #363636;
+    --day-not-in-month: #5E718F;
+    --month-title: #001533;
+    --day-hover: rgba(94, 113, 143, 0.2);
+    --box-shadow: #EFE1D9;
+}
+/*
+    - main-background: màu nền chính của bảng lịch, là màu nền tổng quát;
+    - month-nav: màu nút prev/next (di chuyển giữa các tháng) trên lịch;
+    - weekday: màu của các thứ trong tuần;
+    - highlight-today: màu border và màu chữ của ngày hôm nay (today);
+    - highlight-picked-day: màu nền và màu chữ của ngày đã chọn trên input;
+    --- có thể tự custom cách hiển thị lại tại class .ui-state-highlight và .ui-state-active ---
+    - day-in-month: màu chữ của ngày trong tháng;
+    - day-not-in-month: màu chữ của ngày không phải thuộc tháng hiện tại;
+    - month-title: màu tiêu đề tháng của lịch;
+    - day-hover: màu nền của ngày được di chuột vào;
+    - box-shadow: màu box shadow của bảng lịch;
+*/
+#ui-datepicker-div {
+    background: var(--main-background);
+    border-radius: 8px;
+    -webkit-box-shadow: 0 0 4px 0.1rem var(--box-shadow);
+	-moz-box-shadow: 0 0 4px 0.1rem var(--box-shadow);
+    box-shadow: 0 0 4px 0.1rem var(--box-shadow);
+}
+.ui-datepicker-prev,
+.ui-datepicker-next {
+    position: absolute;
+    font-size: 24px;
+    color: var(--month-nav) !important;
+    top: -7px;
+    opacity: 0.4;
+    cursor: pointer;
+}
+.ui-datepicker-prev {
+    left: 0;
+}
+.ui-datepicker-next {
+    right: 0;
+}
+.ui-datepicker-header {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 16px 24px;
+    position: relative;
+}
+.ui-datepicker-calendar {
+    text-align: center;
+    margin: 16px 24px;
+}
+.ui-datepicker-calendar tr th, .ui-datepicker-calendar tr td {
+    padding-bottom: 8px;
+}
+.ui-datepicker-calendar a {
+    text-decoration: none;
+    display: block;
+    margin: 0 auto;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.ui-datepicker-calendar thead tr th {
+    font-family: "Roboto Medium";
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: var(--weekday);
+}
+.ui-datepicker-calendar tbody tr td:hover a {
+    background-color: var(--day-hover);
+    border-radius: 50%;
+}
+.ui-datepicker-calendar .ui-state-highlight {
+    border-color: var(--highlight-today);
+    color: var(--highlight-today);
+}
+.ui-datepicker-calendar tbody tr td:hover a.ui-state-highlight {
+    border-color: var(--highlight-today);
+    color: var(--highlight-today);
+}
+.ui-datepicker-calendar tbody tr td a.ui-state-active {
+    border-color: var(--highlight-picked-day);
+    color: var(--white) !important;
+    background: var(--highlight-picked-day);
+}
+.ui-datepicker-calendar tbody tr td a {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: var(--day-in-month);
+}
+.ui-datepicker-calendar tbody tr td.ui-datepicker-other-month a {
+    color: var(--day-not-in-month);
+    opacity: 0.5;
+} 
+.ui-datepicker-title {
+    font-family: "Roboto Medium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    color: var(--month-title);
+}
+@media screen and (max-width: 1366px) {
+    .ui-datepicker-calendar tr th, .ui-datepicker-calendar tr td {
+        padding-bottom: 4px;
+    }
+    .ui-datepicker-title,
+    .ui-datepicker-calendar thead tr th,
+    .ui-datepicker-calendar tbody tr td a {
+        font-size: 14px;
+    }
+    .ui-datepicker-header {
+        margin: 12px 20px;
+    }
+    .ui-datepicker-calendar {
+        margin: 12px 20px;
+    }
+}

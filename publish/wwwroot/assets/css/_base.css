@@ -1,0 +1,203 @@
+:root {
+  --blue: #0074E8;
+  --blue-light: #0B8AE7;
+  --indigo: #6B87E9;
+  --purple: #5530BE;
+  --pink: #e83e8c;
+  --red: #CD0909;
+  --orange: #F17923;
+  --yellow: #FFDF36;
+  --green: #00BF91;
+  --teal: #20c997;
+  --cyan: #49C5F6;
+  --white: #fff;
+  --gray: #7A93B3;
+  --gray-dark: #59769A;
+  --red-contra: #de2626;
+  --primary: #1B315A;
+  --secondary: #6c757d;
+  --success: #0AB175;
+  --success-light: #CEEFE3;
+  --info: #0B4DCE;
+  --info-light: #CEDBF5;
+  --warning: #F1B314;
+  --warning-light: #FCF0D0;
+  --danger: #FA6666;
+  --danger-light: #F5CECE;
+  --light: #f8f9fa;
+  --blue-cm: #63EEFC;
+  --blue-dark: #1D3D74;
+  --blue-gray: #3D5C81;
+  --violet:#A383FF;
+  --sky: #CEE8FA;
+  --bg-white: #F4F0FF;
+  --bg-primary: rgba(0, 0, 0, 0.6);
+  --dark-gray: #4A4A4A;
+  --dark: #343a40;
+  --body: #020F1F;
+  --button:#00ACF0;
+  --border-success: #A9E4CF;
+  --border-info: #AAC1EE;
+  --border-warning: #FAE4AD;
+  --border-danger: #EEA9A9;
+  --border-table:#C9D7F5;
+  --border-input:#D7DDE4;
+  --border-light: #E2E8EF;
+  --bg-thead-table:#C5DFFA;
+  --bg-box: #F4F8FF;
+  --bg-blue-light: #E7F3FF;
+  --title:#3247B8;
+  --texxt:#0F1E33;
+  --stroke-box: #D1D9EB;
+  --placeholder-form: #5E6B7D;
+  --bg-gradient: linear-gradient(85deg, #5F9FFF -3.78%, #5D34EC 103.8%);
+  --scrollbar-thumb: #BDBDBD;
+  --scrollbar-thumb-light: rgba(244,248,255, 0.2);
+
+  --btn-border-warning: var(--warning);
+	--btn-bg-warning: var(--warning);
+	--btn-text-warning: var(--white);
+
+  --btn-border-outline-primary: var(--primary);
+	--btn-bg-outline-primary: var(--white);
+	--btn-text-outline-primary: var(--primary);
+
+  --btn-border-outline-secondary: var(--blue);
+	--btn-bg-outline-secondary: var(--white);
+	--btn-text-outline-secondary: var(--blue);
+}
+
+@font-face {
+  font-family: 'Inter Thin';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Inter-Thin'), url('../fonts/Inter/static/Inter-Thin.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter ExtraLight';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Inter-ExtraLight'), url('../fonts/Inter/static/Inter-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter Light';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Inter Light'), url('../fonts/Inter/static/Inter-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Inter-Regular'), url('../fonts/Inter/static/Inter-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Inter-Medium'), url('../fonts/Inter/static/Inter-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter SemiBold';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Inter-SemiBold'), url('../fonts/Inter/static/Inter-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Inter-Bold'), url('../fonts/Inter/static/Inter-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter ExtraBold';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Inter-ExtraBold'), url('../fonts/Inter/static/Inter-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter Black';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Inter-Black'), url('../fonts/Inter/static/Inter-Black.ttf') format('truetype');
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: 'Montserrat Thin';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Montserrat-Thin'), url('../fonts/Montserrat/static/Montserrat-Thin.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat ExtraLight';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Montserrat-ExtraLight'), url('../fonts/Montserrat/static/Montserrat-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat Light';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Montserrat Light'), url('../fonts/Montserrat/static/Montserrat-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat-Regular'), url('../fonts/Montserrat/static/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Montserrat-Medium'), url('../fonts/Montserrat/static/Montserrat-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat SemiBold';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Montserrat-SemiBold'), url('../fonts/Montserrat/static/Montserrat-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Montserrat-Bold'), url('../fonts/Montserrat/static/Montserrat-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat ExtraBold';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Montserrat-ExtraBold'), url('../fonts/Montserrat/static/Montserrat-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat Black';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Montserrat-Black'), url('../fonts/Montserrat/static/Montserrat-Black.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Paytone One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Paytone One'), url('../fonts/Paytone_One/PaytoneOne-Regular.ttf') format('truetype');
+}
